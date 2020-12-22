@@ -14,5 +14,8 @@ MediaPlayer 라이프 사이클에 대해서 보다 더 파악할 수 있는 연
 
 그 외에 SVG 파일 형식의 벡터 이미지를 다루어 보았다.
 
+RxAndroid을 통한 EventBus를 통한 MediaPlayer의 라이프 사이클과 Fragment 들의 동작을 연계하였으며
+Observer를 이용하여 View가 파괴될 때 리소스 낭비를 고려하여 제작하였다.
+
 * 오디오 포커스 적용 예정
 
