@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/playerDurationColor"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.LyricsDetailFragment">
+
+    <TextView
+        android:id="@+id/songTitleLyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/songArtistLyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songTitleLyrics" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lyricsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seekBarZone"
+        android:layout_below="@+id/songArtistLyrics"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <ImageButton
+        android:id="@+id/exitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/abc_vector_test" />
+
+    <ImageButton
+        android:id="@+id/zoomBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exitBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_zoom_0" />
+
+    <ImageButton
+        android:id="@+id/lyricsToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zoomBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_aim_off" />
+
+    <!-- controller -->
+    <include
+        android:id="@+id/seekBarZone"
+        layout="@layout/merge_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp" />
+
+</RelativeLayout>

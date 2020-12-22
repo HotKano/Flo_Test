@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/player_background"
+    android:clickable="true"
+    tools:context=".activities.PlayerActivity">
+
+    <!-- 노래 제목 -->
+    <TextView
+        android:id="@+id/playerMusicTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerMusicArtist"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/playerMusicTitle" />
+
+    <!-- 가수 -->
+    <TextView
+        android:id="@+id/playerMusicArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerMusicCover"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/playerMusicArtist" />
+
+    <!-- 앨범 이미지 -->
+    <ImageView
+        android:id="@+id/playerMusicCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!-- 가사 구역 -->
+    <TextView
+        android:id="@+id/playerMusicLyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerMusicCover"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/playerMusicArtist" />
+
+    <!-- controller -->
+    <include
+        layout="@layout/merge_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerController"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp" />
+
+</RelativeLayout>

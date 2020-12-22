@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black">
+
+    <!-- SeekBar -->
+    <SeekBar
+        android:id="@+id/playerSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:progressDrawable="@drawable/player_seek_bar_background"
+        android:thumb="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerSeekBar"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="@color/playerPositionColor" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerSeekBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:text="03:10"
+        android:textColor="@color/playerDurationColor" />
+
+    <RelativeLayout
+        android:id="@+id/playerController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/duration"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/loopToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_player_loop_btn_off" />
+
+        <ImageButton
+            android:id="@+id/playToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_player_pause_btn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
