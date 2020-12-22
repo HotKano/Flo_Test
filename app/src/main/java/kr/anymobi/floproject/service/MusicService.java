@@ -119,7 +119,7 @@ public class MusicService extends Service {
                 mMediaPlayer.seekTo(pos);
     }
 
-    // 재생 시작
+    // 재생 시작ddddd
     public void setStartMedia() {
         if (mMediaPlayer != null && !stopFlag)
             mMediaPlayer.start();
